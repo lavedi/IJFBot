@@ -1,5 +1,7 @@
 # IJFBot
-Telegram Bot for International Journalism Festival
+Telegram Bot for International Journalism Festival.
+
+This bot is entirely based on the [Telegram Bot Bootstrap](http://kengz.github.io/telegram-bot-bootstrap/) by *kengz* (thank you so much!) and was developed in 2016 for the 10th edition of the IJF. After the event, it was release as Open Source Software under the MIT License in memory of Aaron Swartz.
 
 
 ## Installation
@@ -12,3 +14,29 @@ git clone https://github.com/ttan/IJFBot.git
 Either way you'll get a module with the Telegram bot API wrapped in Node, and a bootstrapped, deploy-ready project.
 
 If you haven't already, get a bot from [BotFather](https://core.telegram.org/bots) and remember your bot *token*!
+
+## Data sources
+
+### Events data
+
+All data about the events are gathered from an xml file called (and cached) by bot.js - see example in `db/ijf.xml`. All events are in the format:
+
+```
+<evento> 
+			<eventID>1184</eventID> 
+			<titolo>Voci del Mattino - RAI Radio 1</titolo> 
+			<data>2016-04-6 06:00:00</data> 
+			<date_start>2016-04-06 06:00:00</date_start>
+			<date_end>2016-04-06 08:00:00</date_end>	  
+			<categoria>live from Perugia</categoria> 
+			<speakers>Paolo Salerno</speakers> 
+			<location>Hotel Brufani - Bar Bellavista</location> 
+			<descrizione><![CDATA[
+Broadcast live from the Hotel Brufani in Perugia, the RAI Radio 1 news analysis morning show Voci del Mattino presented by Paolo Salerno. Festival speakers will take part.]]></descrizione>
+			<url>http://www.journalismfestival.com/programme/2016/voci-del-mattino-rai-radio-1-3</url>
+	</evento>
+```
+
+### Location data
+
+Info for the `/locate` command are in the bot.js file, coded in JSON. I suggest to move this info in a separate file in `/db` folder.

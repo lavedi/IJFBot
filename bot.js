@@ -122,7 +122,7 @@ bot.prototype.handle = function(req, res) {
                     BOTTONE.sendMessage(chat_id, "Current events:\n");
                     var rc = new RequestCaching();
 
-                    rc.get("http://www.journalismfestival.com/mobile/ijf.xml", {}, 3600, 
+                    rc.get("http://www.yoursite.com/events.xml", {}, 3600, 
                     function(err, res, body, cache) {
                         console.log('Response', res);         // response params object (options, headers, statusCode)
                         //console.log('Body', body);            // response body as string
