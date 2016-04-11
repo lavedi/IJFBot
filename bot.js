@@ -12,7 +12,7 @@ var async = require('async')
 var fs = require('fs')
 // API as superclass that bot inherits methods from
 var API = require(__dirname + '/API.js')
-var visitor = ua('UA-75034791-2');
+var visitor = ua('UA-XXXXXXX-X');
 //image
 //caching
 var RequestCaching = require('node-request-caching/lib/request-caching');

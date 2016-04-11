@@ -4,7 +4,6 @@
 
 // dependencies
 // express
-require('newrelic');
 var _ = require('lomath');
 var express = require('express');
 var app = express();
@@ -17,8 +16,8 @@ var RequestCaching = require('node-request-caching/lib/request-caching');
 
 // telegram bot
 var bot = require(__dirname + '/bot.js');
-var token = '209126231:AAEa3LnzVkL86L-hIG3EM8P3h7kf1l6rrtY';
-var webhookUrl = 'https://ijfbot.herokuapp.com/'
+var token = '12345678:xxxxxxxxxxx-xxxxxxxxxxxxxxxxx';
+var webhookUrl = 'https://webhook.url/'
 // var webhookUrl = 'https://89679c38.ngrok.io';
 var bot1 = new bot(token, webhookUrl);
 
