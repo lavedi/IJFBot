@@ -1,0 +1,231 @@
+
+                      location: [
+                        {
+                            name: 'Hotel Brufani', 
+                            tag: ['brufani'],
+                            lat: 43.1084601,
+                            long: 12.3852223
+                        },
+                        {
+                            name: "Sala dei Notari",
+                            tag: ['notari'],
+                            lat: 43.111947,
+                            long: 12.3881108
+                        },
+                        {
+                            name: "Teatro Morlacchi",
+                            tag: ['morlacchi'],
+                            lat: 43.1137652,
+                            long: 12.386609
+                        },
+                        {
+                            name: "Centro Servizi G. Alessi",
+                            tag: ['alessi'],
+                            lat: 43.110803,
+                            long: 12.3883468
+                        },
+                        {
+                            name: "Hotel La Rosetta & Restaurant",
+                            tag: ['rosetta'],
+                            lat: 43.1092874,
+                            long: 12.3855836
+                        },
+                        {
+                            name: "Hotel Locanda della Posta",
+                            tag: ['posta'],
+                            lat: 43.1097139,
+                            long: 12.3858835
+                        },
+                        {
+                            name: "Hotel ristorante Perusia La Villa",
+                            tag: ['perusia'],
+                            lat: 43.1165109,
+                            long: 12.3989332
+                        },
+                        {
+                            name: "Hotel Giò Wine e Jazz Area",
+                            tag: ['giò'],
+                            lat: 43.1125262,
+                            long: 12.3753476
+                        },
+                        {
+                            name: "San Gallo Palace Hotel",
+                            tag: ['san gallo'],
+                            lat: 43.1061396,
+                            long: 12.3861238
+                        },
+                        {
+                            name: "Perugia Plaza Hotel",
+                            tag: ['plaza'],
+                            lat: 43.0959864,
+                            long: 12.3836685
+                        },
+                        {
+                            name: "Hotel Alla Posta dei Donini",
+                            tag: ['donini'],
+                            lat: 43.037917,
+                            long: 12.3994033
+                        }, 
+                        {
+                            name: "Hotel Fortuna",
+                            tag: ['fortuna'],
+                            lat: 43.1096051,
+                            long: 12.3851425
+                        },
+                        {
+                            name: "Etruscan Chocohotel",
+                            tag: ['chocohotel'],
+                            lat: 43.0993652,
+                            long: 12.3824819
+                        },
+                        {
+                            name: "Hotel Perugia Ilgo",
+                            tag: ['ilgo'],
+                            lat: 43.1150091,
+                            long: 12.4011722
+                        },
+                        {
+                            name: "Hotel Eden",
+                            tag: ['eden'],
+                            lat: 43.10919,
+                            long: 12.3841214
+                        },
+                        {
+                            name: "Albergo Hotel Umbria",
+                            tag: ['umbria'],
+                            lat: 43.110854,
+                            long: 12.3854073
+                        },
+                        {
+                            name: "Hotel Iris Perugia",
+                            tag: ['iris'],
+                            lat: 43.1068617,
+                            long: 12.3866772
+                        },
+                        {
+                            name: "Hotel Sant'Ercolano",
+                            tag: ['ercolano'],
+                            lat: 43.1088001,
+                            long: 12.3881595
+                        },
+                        {
+                            name: "Albergo Anna",
+                            tag: ['anna'],
+                            lat: 43.1119729,
+                            long: 12.3844386
+                        },
+                        {
+                            name: "Hotel San Sebastiano",
+                            tag: ['sebastiano'],
+                            lat: 43.1146482,
+                            long: 12.3850819
+                        },
+                        {
+                            name: "Hotel Europa",
+                            tag: ['europa'],
+                            lat: 43.1110215,
+                            long: 12.3831289
+                        },
+                        {
+                            name: "Hotel Priori",
+                            tag: ['priori'],
+                            lat: 43.1117685,
+                            long: 12.3850356
+                        },
+                        {
+                            name: "Ostello Mario Spagnoli",
+                            tag: ['spagnoli'],
+                            lat: 43.1048015,
+                            long: 12.3590544
+                        },
+                        {
+                            name: "Ostello della Gioventù Perugia Centro",
+                            tag: ['gioventù'],
+                            lat: 43.112515,
+                            long: 12.3894173
+                        },
+                        {
+                            name: "Ostello Villa Giardino",
+                            tag: ['giardino'],
+                            lat: 43.1348569,
+                            long: 12.4413158
+                        },
+                        {
+                            name: "Bed & Breakfast Poldo e Camilla",
+                            tag: ['poldo'],
+                            lat: 43.1031681,
+                            long: 12.346179
+                        },
+                        {
+                            name: "Fermata Minimetrò Pincetto",
+                            tag: ['pincetto'],
+                            lat: 43.110109,
+                            long: 12.3882103
+                        },
+                        {
+                            name: "Stazione Ferroviaria di Perugia",
+                            tag: ['stazione'],
+                            lat: 43.1040195,
+                            long: 12.3735178
+                        },
+                        {
+                            name: "Hotel Morlacchi",
+                            tag: ['morlacchi'],
+                            lat: 43.11284,
+                            long: 12.3844113
+                        },
+                        {
+                            name: "Agriturismo La Molinella",
+                            tag: ['molinella'],
+                            lat: 43.1186109,
+                            long: 12.4265595
+                        },
+                        {
+                            name: "Auditorium Santa Cecilia",
+                            tag: ['cecilia'],
+                            lat: 43.1125147,
+                            long: 12.3851559
+                        },
+                        {
+                            name: "Sala del Dottorato",
+                            tag: ['dottorato'],
+                            lat: 43.1124998,
+                            long: 12.3869734
+                        },
+                        {
+                            name: "Il Caprifoglio",
+                            tag: ['caprifoglio'],
+                            lat: 43.1388082,
+                            long: 12.5310397
+                        },
+                        {
+                            name: "Fondazione Ranieri Sorbello",
+                            tag: ['ranieri'],
+                            lat: 43.1126706,
+                            long: 12.3882219
+                        },
+                        {
+                            name: "Hostel Little Italy Perugia",
+                            tag: ['little'],
+                            lat: 43.1134427,
+                            long: 12.3872738
+                        },
+                        {
+                            name: "Teatro della Sapienza",
+                            tag: ['sapienza'],
+                            lat: 43.1096716,
+                            long: 12.3843752
+                        },
+                        {
+                            name: "Residenza Baldesca",
+                            tag: ['baldesca'],
+                            lat: 43.1130826,
+                            long: 12.3864711
+                        },
+                        {
+                            name: "Residenza Turrena",
+                            tag: ['turrena'],
+                            lat: 43.1130162,
+                            long: 12.386849
+                        }
+                      ]

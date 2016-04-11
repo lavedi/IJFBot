@@ -1,0 +1,69 @@
+{
+  "name": "telegram-bot-bootstrap",
+  "version": "0.0.15",
+  "description": "A bootstrap for Telegram bot with directly deployable sample bot and JS-wrapped API methods.",
+  "main": "API.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "./node_modules/.bin/_mocha -u tdd -R spec"
+  },
+  "engines": {
+    "node": "4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kengz/telegram-bot-bootstrap.git"
+  },
+  "keywords": [
+    "Telegram",
+    "bot",
+    "Telegram bot",
+    "nodeJS",
+    "API",
+    "bootstrap",
+    "template",
+    "sample",
+    "Heroku"
+  ],
+  "author": {
+    "name": "kengz"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kengz/telegram-bot-bootstrap/issues"
+  },
+  "homepage": "https://github.com/kengz/telegram-bot-bootstrap",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "ejs": "^2.3.1",
+    "express": "^4.13.1",
+    "lomath": "^0.1.6",
+    "morgan": "^1.6.1",
+    "multer": "^0.1.8",
+    "hiredis": "^0.4.0",
+    "q": "^1.4.1",
+    "reqscraper": "0.0.2",
+    "request": "~2.69.0",
+    "fs": "0.0.2",
+    "xml2js": "~0.4.16",
+    "node-request-caching": "0.0.1",
+    "json-query": "~1.8.0",
+    "moment": "~2.12.0",
+    "universal-analytics": "~0.3.10",
+    "async": "~1.5.2",
+    "newrelic": "~1.26.0"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "dokker": "^0.1.1",
+    "mocha": "^2.2.5"
+  },
+  "readme": "# telegram-bot-bootstrap\n[![npm version](https://badge.fury.io/js/telegram-bot-bootstrap.svg)](http://badge.fury.io/js/telegram-bot-bootstrap) [![Build Status](https://travis-ci.org/kengz/telegram-bot-bootstrap.svg?branch=master)](https://travis-ci.org/kengz/telegram-bot-bootstrap) [![Dependency Status](https://gemnasium.com/kengz/telegram-bot-bootstrap.svg)](https://gemnasium.com/kengz/telegram-bot-bootstrap)\n\n\nA bootstrap for Telegram bot with directly deployable sample bot and JS-wrapped API methods. You can use all methods available in the Telegram API directly, and send any supported media (we serialize the formData for you to send over HTTP).\n\nSee the full [API documentation](http://kengz.github.io/telegram-bot-bootstrap/) of this project.\n\n<img src=\"./docs/demo-pic.jpg\" width=\"300\" style=\"display:inline-block\" /> <img src=\"./docs/demo-kb.jpg\" style=\"display:inline-block\" width=\"300\"/>\n\n## Installation\nDo either of\n\n```\nnpm install telegram-bot-bootstrap\ngit clone https://github.com/kengz/telegram-bot-bootstrap.git\n```\n\nEither way you'll get a module with the Telegram bot API wrapped in Node, and a bootstrapped, deploy-ready project.\n\nIf you haven't already, get a bot from [BotFather](https://core.telegram.org/bots) and remember your bot *token*!\n\n\n## Features\n- Wrapped API methods take either a JSON object or multiple parameters.\n- Auto serialization for HTTP formData: send photos/keyboards/media directly.\n- API methods return `promises` (uses [q](https://github.com/kriskowal/q)) for easy chaining and flow control.\n- Complete documentation and examples usages.\n- Bootstrapped and directly deployable bot.\n\n\n## Usage: only the API\nSee the full [API documentation](http://kengz.github.io/telegram-bot-bootstrap/) of this project.\n\n`API.js` contains the [Telegram Bot API](https://core.telegram.org/bots/api) wrapped in Node. The methods will return a promise for easy chaining, and will take either a whole JSON, or multiple parameters for convenience. For the latter, everything will be auto-serialized for HTTP so you don't have to deal with any of the nasty HTTP protocol stuff.\n\nIf you wish to use just the API or test the bot methods, here's an example\n\n#### Local(not deployed yet) test bot constructor\nSee `testbot.js` for functional example.\n\n```Javascript\n// testbot.js\nvar bot = require('telegram-bot-bootstrap');\nvar fs = require('fs');\n\nvar Alice = new bot(your-token);\n\nAlice.getUpdates().then(console.log)\n// → you'll see an update message. Look for your user_id in \"message.from.id\"\n\n// Once you get your id to message yourself, you may:\nAlice.sendMessage(your-id, \"Hello there\")\n// → you'll receive a message from Alice.\n.then(console.log)\n// → optional, will log the successful message sent over HTTP\n```\n\n#### Sending Message, Photo and all media\n\n```\nAlice.sendMessage(86953862, 'Hey wanna see some cool art?');\n\nAlice.sendPhoto(86953862, fs.createReadStream(__dirname+'/alexiuss.jpg'), 'Chronoscape by Alexiuss').then(console.log)\n```\n\nYou'll receive this:\n\n<img src=\"./docs/demo-pic.jpg\" width=\"300\" style=\"display:inline-block\" /> \n\n#### Custom keyboard\n\n```\nvar kb = {\n        keyboard: [\n            ['one'],\n            ['two', 'three'],\n            ['four', 'five', 'six']\n        ],\n        one_time_keyboard: true\n    };\nAlice.sendMessage(86953862, \"Choose a lucky number\", undefined, undefined, kb)\n```\n\n You'll get this:\n \n<img src=\"./docs/demo-kb.jpg\" style=\"display:inline-block\" width=\"300\"/>\n\n\n## Usage: Bootstrapped, Deployable Bot\nSee `index.js` for deployable app, and `bot.js` to customize bot commands.\n\nWe distinguish the bot from the API: `bot.js` extends `API.js`, and will be the deployed component.\n\nThis whole project is bootstrapped and deploy-ready: all the details of HTTP and server stuff taken care of for you. I deploy this git project onto my Heroku and voila, my bot is alive.\n\n#### Setup \nIn addition to the *token*, you'll need a *webhookUrl*. If you deploy your Node app to *Heroku*, then the *webhookUrl* is simply your Heroku site url. Set both of them in the `.env` file:\n\n```Javascript\nPORT=8443\nTOKEN=your-Telegram-bot-token\nWEBHOOK=your-webhook-url\n```\n\nThe sample available is an echo-bot. To make your bot do interesting stuff, head over to `bot.js`, under the `handle` method, start writing your own from below the *Extend from here* comment. \n\nThe bot inherits all the API methods, so you can simply call them for example by `this.sendMessage`.\n\n#### Deployment\nThe server is deployed in `index.js`, and a bot is constructed to handle all *HTTP POST* calls from Telegram.\n\nI use *Heroku*. This shall work for any other services too. Once I'm done setting up, I do:\n\n```\ngit push heroku master\n```\n\nAnd done. Start talking to the bot.",
+  "readmeFilename": "README.md",
+  "_id": "telegram-bot-bootstrap@0.0.15",
+  "dist": {
+    "shasum": "b4589edb7653a2f59f6ed03be008deb85a28b742"
+  },
+  "_from": "telegram-bot-bootstrap@",
+  "_resolved": "https://registry.npmjs.org/telegram-bot-bootstrap/-/telegram-bot-bootstrap-0.0.15.tgz"
+}

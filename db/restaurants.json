@@ -1,0 +1,27 @@
+{  
+   "restaurants":
+	   [
+	    {"lat":43.110003,"long":12.3880215,"name":"Ristorante del Sole","information":"Via Rupe, 1","web":null},
+		{"lat":43.1119497,"long":12.3860209,"name":"Cesarino","information":"Piazza IV Novembre","web":null},
+		{"lat":43.1131205,"long":12.3855307,"name":"Da Peppone","information":"Via Cesare Battista, 5","web":null},
+		{"lat":43.110596,"long":12.3854713,"name":"Al Mangiar Bene","information":"Via della Luna","web":null},
+		{"lat":43.1091581,"long":12.384621,"name":"Altro Mondo","information":"Via Cesare Caporali, 13","web":null},
+		{"lat":43.1127009,"long":12.3877126,"name":"La Bottega del Vino","information":"Via del Sole, 1","web":null},
+		{"lat":43.1127854,"long":12.3871458,"name":"La Lanterna","information":"Via Ulisse Rocchi, 6","web":null},
+		{"lat":43.1118326,"long":12.3852893,"name":"Osteria A Priori","information":"Via dei Priori, 39","web":null},
+		{"lat":43.113152,"long":12.3870093,"name":"Il Vicolo","information":"Via Ulisse Rocchi, 13","web":null},
+		{"lat":43.1120641,"long":12.3901373,"name":"L'osteria del Gufo","information":"Via della Viola, 18","web":null},
+		{"lat":43.1126502,"long":12.3908808,"name":"La Fame","information":"Via della Viola, 54-56","web":null},
+		{"lat":43.11307,"long":12.3869213,"name":"Il Settimo Sigillo","information":"Via Ulisse Rocchi, 1","web":null},
+		{"lat":43.1122996,"long":12.3834935,"name":"Trattoria Borgo San Francesco","information":"Via dei Priori","web":null},
+		{"lat":43.1120755,"long":12.3904571,"name":"Civico 25","information":"Via della Viola, 25","web":null},
+		{"lat":43.1119305,"long":12.3883644,"name":"Il Paiolo","information":"Via Angusta 5/11","web":null},
+		{"lat":43.107884,"long":12.3881262,"name":"Storie Perugine","information":"Corso Cavour, 46","web":null},
+		{"lat":43.111282,"long":12.3860338,"name":"Il Bacio","information":"Via Boncampi, 6","web":null},
+		{"lat":43.109662,"long":12.3875393,"name":"Baba - Burger and Food Lab","information":"Via Oberdan, 35","web":null},
+		{"lat":43.109662,"long":12.3875393,"name":"Mercato Vianova","information":"Via Mazzini, 15","web":null},
+		{"lat":43.1109404,"long":12.386784,"name":"Caffè di Perugia","information":"Via Mazzini, 10","web":null},
+		{"lat":43.110136,"long":12.3856829,"name":"La Taverna","information":"Via delle Streghe, 8","web":null}
+	]
+}
+
