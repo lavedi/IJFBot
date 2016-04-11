@@ -13,7 +13,7 @@ Do
 git clone https://github.com/ttan/IJFBot.git
 ```
 
-Either way you'll get a module with the Telegram bot API wrapped in Node, and a bootstrapped, deploy-ready project.
+You'll get a full deploy-ready project of the bot: you just have to provide datas and tokens.
 
 If you haven't already, get a bot from [BotFather](https://core.telegram.org/bots) and remember your bot *token*!
 
@@ -21,7 +21,7 @@ If you haven't already, get a bot from [BotFather](https://core.telegram.org/bot
 
 ### Events data
 
-All data about the events are gathered from an xml file called (and cached) by `bot.js` - see example in `db/ijf.xml`. All events are in the format:
+All data about the events are gathered from an online xml file called (and cached) by `bot.js` - see example in `db/ijf.xml`. All events are in the format:
 
 ```
 <evento> 
@@ -42,6 +42,11 @@ Broadcast live from the Hotel Brufani in Perugia, the RAI Radio 1 news analysis 
 ### Location data
 
 Info for the `/locate` command are in the bot.js file, coded in JSON. I suggest to move this info in a separate file in `/db` folder.
+
+### Restaurants
+
+Info for the `/food` command are in the `/db/restaurants.json` file.
+*Please note that the `/food` command was not disclosed in the current version of the bot and not tested*
 
 ## Contacts and help
 
