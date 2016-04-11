@@ -1,7 +1,9 @@
 # IJFBot
-Telegram Bot for International Journalism Festival.
+Telegram Bot for [International Journalism Festival](http://www.journalismfestival.com).
 
 This bot is entirely based on the [Telegram Bot Bootstrap](http://kengz.github.io/telegram-bot-bootstrap/) by *kengz* (thank you so much!) and was developed in 2016 for the 10th edition of the IJF. After the event, it was release as Open Source Software under the MIT License in memory of Aaron Swartz.
+
+Since this project was developed precisely for the Festival, it could be difficult to adapt to other use. I'm sorry about this. 
 
 
 ## Installation
@@ -19,7 +21,7 @@ If you haven't already, get a bot from [BotFather](https://core.telegram.org/bot
 
 ### Events data
 
-All data about the events are gathered from an xml file called (and cached) by bot.js - see example in `db/ijf.xml`. All events are in the format:
+All data about the events are gathered from an xml file called (and cached) by `bot.js` - see example in `db/ijf.xml`. All events are in the format:
 
 ```
 <evento> 
@@ -40,3 +42,10 @@ Broadcast live from the Hotel Brufani in Perugia, the RAI Radio 1 news analysis 
 ### Location data
 
 Info for the `/locate` command are in the bot.js file, coded in JSON. I suggest to move this info in a separate file in `/db` folder.
+
+## Contacts and help
+
+Do not hesitate to contact me for any question:
+- telegram: [@tommasotani](http://telegram.me/tommasotani)
+- twitter: [@ttan_](https://www.twitter.com/ttan_)
+- web: [http://www.ttan.org](http://www.ttan.org) - [http://www.journalismfestival.com](http://www.journalismfestival.com)
