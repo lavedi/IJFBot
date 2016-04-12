@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>IJFBot by ttan</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>IJFBot</h1>
+        <h2>Telegram Bot for International Journalism Festival</h2>
+        <a href="https://github.com/ttan/IJFBot" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="ijfbot" class="anchor" href="#ijfbot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IJFBot</h1>
+
+<p>Telegram Bot for <a href="http://www.journalismfestival.com">International Journalism Festival</a>.</p>
+
+<p>This bot is entirely based on the <a href="http://kengz.github.io/telegram-bot-bootstrap/">Telegram Bot Bootstrap</a> by <em>kengz</em> (thank you so much!) and was developed in 2016 for the 10th edition of the IJF. After the event, it was release as Open Source Software under the MIT License in memory of Aaron Swartz.</p>
+
+<p>Since this project was developed precisely for the Festival, it could be difficult to adapt to other use. I'm sorry about this. </p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Do</p>
+
+<pre><code>git clone https://github.com/ttan/IJFBot.git
+</code></pre>
+
+<p>You'll get a full deploy-ready project of the bot: you just have to provide datas and tokens.</p>
+
+<p>If you haven't already, get a bot from <a href="https://core.telegram.org/bots">BotFather</a> and remember your bot <em>token</em>!</p>
+
+<h2>
+<a id="data-sources" class="anchor" href="#data-sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data sources</h2>
+
+<h3>
+<a id="events-data" class="anchor" href="#events-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Events data</h3>
+
+<p>All data about the events are gathered from an online xml file called (and cached) by <code>bot.js</code> - see example in <code>db/ijf.xml</code>. All events are in the format:</p>
+
+<pre><code>&lt;evento&gt; 
+            &lt;eventID&gt;1184&lt;/eventID&gt; 
+            &lt;titolo&gt;Voci del Mattino - RAI Radio 1&lt;/titolo&gt; 
+            &lt;data&gt;2016-04-6 06:00:00&lt;/data&gt; 
+            &lt;date_start&gt;2016-04-06 06:00:00&lt;/date_start&gt;
+            &lt;date_end&gt;2016-04-06 08:00:00&lt;/date_end&gt;      
+            &lt;categoria&gt;live from Perugia&lt;/categoria&gt; 
+            &lt;speakers&gt;Paolo Salerno&lt;/speakers&gt; 
+            &lt;location&gt;Hotel Brufani - Bar Bellavista&lt;/location&gt; 
+            &lt;descrizione&gt;&lt;![CDATA[
+Broadcast live from the Hotel Brufani in Perugia, the RAI Radio 1 news analysis morning show Voci del Mattino presented by Paolo Salerno. Festival speakers will take part.]]&gt;&lt;/descrizione&gt;
+            &lt;url&gt;http://www.journalismfestival.com/programme/2016/voci-del-mattino-rai-radio-1-3&lt;/url&gt;
+    &lt;/evento&gt;
+</code></pre>
+
+<h3>
+<a id="location-data" class="anchor" href="#location-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Location data</h3>
+
+<p>Info for the <code>/locate</code> command are in the bot.js file, coded in JSON. I suggest to move this info in a separate file in <code>/db</code> folder.</p>
+
+<h3>
+<a id="restaurants" class="anchor" href="#restaurants" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Restaurants</h3>
+
+<p>Info for the <code>/food</code> command are in the <code>/db/restaurants.json</code> file.
+<em>Please note that the <code>/food</code> command was not disclosed in the current version of the bot and not tested</em></p>
+
+<h2>
+<a id="contacts-and-help" class="anchor" href="#contacts-and-help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contacts and help</h2>
+
+<p>Do not hesitate to contact me for any question:</p>
+
+<ul>
+<li>telegram: <a href="http://telegram.me/tommasotani">@tommasotani</a>
+</li>
+<li>twitter: <a href="https://www.twitter.com/ttan_">@ttan_</a>
+</li>
+<li>web: <a href="http://www.ttan.org">http://www.ttan.org</a> - <a href="http://www.journalismfestival.com">http://www.journalismfestival.com</a>
+</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/ttan/IJFBot/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ttan/IJFBot/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/ttan/IJFBot"></a> is maintained by <a href="https://github.com/ttan">ttan</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
