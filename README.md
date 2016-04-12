@@ -12,6 +12,11 @@ Do
 ```
 git clone https://github.com/ttan/IJFBot.git
 ```
+then
+
+```
+npm install
+```
 
 You'll get a full deploy-ready project of the bot: you just have to provide datas and tokens.
 
